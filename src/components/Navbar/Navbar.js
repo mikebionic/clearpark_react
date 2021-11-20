@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Transition } from "@headlessui/react";
+import { NavLink } from 'react-router-dom'
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,32 +13,32 @@ function Nav() {
               <div className="flex-shrink-0">
                 <img
                   className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                  // src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                   alt="Workflow"
                 />
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline justify-end space-x-4">
-                  <a
-                    href="/UserTable"
+                  <NavLink
+                    to="/UserTable"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Dashboard
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/users/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Team
-                  </a>
+                    Users
+                  </NavLink>
 
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/devices/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Projects
-                  </a>
+                    Devices
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -100,26 +101,26 @@ function Nav() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
+                <NavLink
+                  to="/UserTable"
                   className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Dashboard
-                </a>
+                </NavLink>
 
-                <a
-                  href="#"
+                <NavLink
+                  to="/users/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Team
-                </a>
+                  Users
+                </NavLink>
 
-                <a
-                  href="#"
+                <NavLink
+                  to="/devices/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
-                </a>
+                  Devices
+                </NavLink>
 
               </div>
             </div>
