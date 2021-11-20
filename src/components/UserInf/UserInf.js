@@ -1,12 +1,13 @@
 import React from 'react'
-import UserImg from '../UserImg/UserImg'
+import Avatar from '../Avatar/Avatar'
 
 function UserInf() {
 	return (
 		<div>
 			<div className="w-60">
 				<div className="bg-white shadow-xl rounded-lg py-3">
-						<UserImg />
+						<Avatar imageUrl={'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'} 
+						name={"AvatarName"} />
 						<h3 className="text-center text-xl text-gray-900 font-medium leading-8">Joh Doe</h3>
 						<div className="text-center text-gray-400 text-xs font-semibold">
 							<p>Web Developer</p>

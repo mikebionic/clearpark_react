@@ -1,19 +1,12 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import { useSpring, animated } from 'react-spring';
 import From_To from '../From_To/From_To';
 import Table from '../Table/Table';
 import UserInf from '../UserInf/UserInf';
+import Avatar from '../Avatar/Avatar';
 
 export const Modal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
 
-  const animation = useSpring({
-    config: {
-      duration: 250
-    },
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-  });
 
   const closeModal = e => {
     if (modalRef.current === e.target) {
@@ -51,6 +44,8 @@ export const Modal = ({ showModal, setShowModal }) => {
             </div>
               <div className="flex items-center px-2 py-3" showModal={showModal}>
               <div>
+                <Avatar imageUrl={'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'} 
+              name={"AvatarName"} />
                 <UserInf />
               </div>
               <div className="mx-3">
