@@ -1,20 +1,2 @@
 .container{
 }
-.avatarImage{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px solid greenyellow;
-}
-.avatatext{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: lightblue;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-weight: 700;
-}

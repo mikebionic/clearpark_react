@@ -37,15 +37,18 @@ export const Modal = ({ showModal, setShowModal }) => {
       {showModal ? (
         <>
         <div className="animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover">
-          <div className="overflow-auto border-t-8 max-h-full	 max-w-full	bg-opacity-50 border-gray-800 bg-gray-800  rounded-xl p-5 absolute mx-auto my-auto rounded-xl shadow-lg  bg-white">  
+          <div className="modal-container bg-white shadow-lg overflow-auto border-t-8 max-h-full max-w-full border-purple-500 rounded-xl p-5 absolute mx-auto my-auto rounded-xl shadow-lg">  
             <div className="w-2 bg-gray-800 dark:bg-gray-900"></div>
-            <div  className="float-right h-1.5">
-              <div onClick={closeModal} ref={modalRef} className="p-4">X</div>
+            <div className="flex justify-between items-center pb-3">
+              <p className="text-2xl font-bold">Simple Modal!</p>
+              <div className="modal-close cursor-pointer z-50">
+                <svg onClick={closeModal} ref={modalRef} className="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                  <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                </svg>
+              </div>
             </div>
               <div className="flex items-center px-2 py-3" showModal={showModal}>
               <div>
-                <Avatar imageUrl={'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'} 
-              name={"AvatarName"} />
                 <UserInf />
               </div>
               <div className="mx-3">

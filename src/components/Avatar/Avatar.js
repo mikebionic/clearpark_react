@@ -1,16 +1,14 @@
 
 import React, { Fragment } from 'react';
-import classes from './avatar.module.css';
 
 const Avatar = ({imageUrl, name}) => {
-	// const shorten = props.details ? props.details.substring(0, 100) : '';
 
-	return(
+	return( 
 		<Fragment>
-			<div className={classes.container}>
-				{imageUrl && <img className={classes.avatarImage} alt="avatar" src={imageUrl} />}
+			<div className="flex justify-center	pt-4"> 
+				{imageUrl && <img alt="avatar" src={imageUrl} />}
 				{imageUrl === undefined && name !== "" &&(
-					<div className={classes.avatatext}>
+					<div className="w-16 h-16 rounded-2xl bg-purple-500	">
 						{/* {name.substring(0,2)} */}
 					</div>
 				)}

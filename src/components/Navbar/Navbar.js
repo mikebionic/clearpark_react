@@ -13,17 +13,17 @@ function Nav() {
               <div className="flex-shrink-0">
                 <img
                   className="h-8 w-8"
-                  // src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                   alt="Workflow"
                 />
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline justify-end space-x-4">
                   <NavLink
-                    to="/UserTable"
+                    to="/"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Dashboard
+                    Home
                   </NavLink>
 
                   <NavLink
