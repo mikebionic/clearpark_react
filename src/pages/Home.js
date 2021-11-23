@@ -24,7 +24,7 @@ const Home = () => {
 		}
 	]
 	return (
-		<div className="bg-gray-300">
+		<div>
 			<Nav />
 
 			<Modal showModal={showModal} setShowModal={setShowModal} userInfo={modalUserInfo} />

@@ -16,11 +16,7 @@ function UserName({name, description, balance}) {
 						</tr>
 					</tbody>
 				</table>
-
-				<div className="text-center my-3">
-					<a className="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="#">View Profile</a>
-				</div>
-        </div>
+      </div>
 		</div>
 	)
 }
