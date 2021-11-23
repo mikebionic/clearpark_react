@@ -2,23 +2,11 @@ import React from 'react'
 import Avatar from '../Avatar/Avatar'
 
 function UserInf() {
-	// 	const deposit_btn = document.getElementById('deposit-btn');
-	// 	deposit_btn.addEventListener('click', function(){
-
-	// 	const depositStringToInt = getInputNumb("deposit-amount");
-
-	// 	updateSpanTest("current-deposit", depositStringToInt);
-	// 	updateSpanTest("current-balance", depositStringToInt);
-
-	// 	//setting up the input field blank when clicked
-	// 	document.getElementById('deposit-amount').value = "";
-
-	//  })
 	return (
 		<div>
 			<div className="w-60">
 				<div className="bg-white shadow-xl rounded-lg py-3">
-						<Avatar />
+						<Avatar name={"Plan Planyyew"} />
 						<h3 className="text-center text-xl text-gray-900 font-medium leading-8">Joh Doe</h3>
 						<div className="text-center text-gray-400 text-xs font-semibold">
 							<p>Web Developer</p>

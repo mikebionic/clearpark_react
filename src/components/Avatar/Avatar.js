@@ -1,17 +1,14 @@
 
 import React, { Fragment } from 'react';
 
-const Avatar = ({imageUrl, name}) => {
+const Avatar = ({name}) => {
 
 	return( 
 		<Fragment>
 			<div className="flex justify-center	pt-4"> 
-				{imageUrl && <img alt="avatar" src={imageUrl} />}
-				{imageUrl === undefined && name !== "" &&(
-					<div className="w-16 h-16 rounded-2xl bg-purple-500	">
-						{/* {name.substring(0,2)} */}
-					</div>
-				)}
+				<div className="w-16 h-16 justify-center flex items-center text-black-400 rounded-2xl bg-purple-500 text-3xl">
+					{name ? name.substring(0,2) : 'no'}
+				</div>
 			</div>
 		</Fragment>
 	)
