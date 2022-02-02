@@ -12,7 +12,6 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/UserTable' exact component={UserTable} />
           <Route path='/users/' exact component={UserTable} />
           <Route path='/devices/' exact component={AttendancePage} />
         </Switch>

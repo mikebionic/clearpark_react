@@ -5,7 +5,7 @@ function UserTable() {
 	return (
 		<div>
 			<Nav />
-			<div className="w-full">
+			<div>
 				<Table />
 			</div>
 		</div>
