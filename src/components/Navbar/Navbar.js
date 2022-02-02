@@ -9,11 +9,9 @@ function Nav() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                />
+                <p className="text-blue-400">
+                  Parkowka
+                </p>
               </div>
               <div>
                 <div className="ml-10 flex items-baseline justify-end space-x-4">
@@ -21,21 +19,21 @@ function Nav() {
                     to="/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    Home
+                    Users
                   </NavLink>
 
                   <NavLink
                     to="/users/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    Users
+                    User table
                   </NavLink>
 
                   <NavLink
                     to="/devices/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    Devices
+                    Attendance
                   </NavLink>
                 </div>
               </div>
