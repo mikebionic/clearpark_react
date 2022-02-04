@@ -7,7 +7,7 @@ const Card = ({setShowModal, userInfo}) => {
 	return (
 		<div>
 			<div onClick={() => setShowModal(true)} className="w-60 md:w-5/5 m-3 mx-auto overflow-hidden bg-gray-200 rounded-lg shadow-lg dark:bg-gray-800">
-				<Avatar {...userInfo} />
+				<Avatar name={userInfo.RpAccName} />
 				<UserName {...userInfo} />
 			</div>				
 		</div>

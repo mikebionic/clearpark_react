@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { fetchAttendances } from '../services'
+import { fetchOrders } from '../services'
 
 const AttendancePage = ({history}) => {
 
@@ -10,7 +10,7 @@ const AttendancePage = ({history}) => {
 	useEffect(() => {
 		const fetch_logs = async () => {
 			try {
-				const attendance_data = await fetchAttendances()
+				const attendance_data = await fetchOrders()
 				const json_data = await attendance_data.json()
 				setData(json_data.data)
 			} catch (e){

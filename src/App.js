@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import UserTable from './pages/UserTable';
+import ClientsGridPage from './pages/ClientsGridPage';
+import ClientsTablePage from './pages/ClientsTablePage';
 import AttendancePage from './pages/AttendancePage';
 
 
@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/users/' exact component={UserTable} />
+          <Route path='/' exact component={ClientsGridPage} />
+          <Route path='/clients_table/' exact component={ClientsTablePage} />
           <Route path='/devices/' exact component={AttendancePage} />
         </Switch>
       </Router>

@@ -19,21 +19,21 @@ function Nav() {
                     to="/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    Users
+                    Ulanyjylar
                   </NavLink>
 
                   <NavLink
-                    to="/users/"
+                    to="/clients_table/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    User table
+                    Ulanyjylar T
                   </NavLink>
 
                   <NavLink
-                    to="/devices/"
+                    to="/parking_orders/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
-                    Attendance
+                    Giriş/Çykyş
                   </NavLink>
                 </div>
               </div>
