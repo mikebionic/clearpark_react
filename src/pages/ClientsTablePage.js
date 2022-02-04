@@ -3,8 +3,9 @@ import Nav from '../components/Navbar/Navbar';
 import ClientsTable from '../components/ClientsTable'
 
 import { fetchRpAccs } from '../services'
+import { withRouter } from 'react-router-dom';
 
-function ClientsTablePage() {
+function ClientsTablePage({history}) {
 
 	const [data, setData] = useState([])
 
@@ -16,10 +17,14 @@ function ClientsTablePage() {
 			}
 		}
 		fetch_rp();
-		setInterval(() => {
+		const fetch_interval = setInterval(() => {
 			fetch_rp()
 		}, 10000);
-  }, []);
+
+		return () => {
+			clearInterval(fetch_interval);
+		}	
+	}, [setData, history])
 
 	return (
 		<div>
@@ -31,4 +36,4 @@ function ClientsTablePage() {
 	)
 }
 
-export default ClientsTablePage
+export default withRouter(ClientsTablePage)

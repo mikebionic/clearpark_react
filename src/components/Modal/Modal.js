@@ -1,13 +1,11 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import From_To from '../From_To/From_To';
-import ClientsTable from '../ClientsTable';
-import Card from '../Card/Card';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
-import { fetchOrders } from '../../services'
+import InvoicesTable from '../InvoicesTable';
+import Card from '../Card/Card';
+import { fetchInvoices } from '../../services'
 
 const Modal = ({ showModal, setShowModal, userInfo }) => {
   const modalRef = useRef();
-
 
   const closeModal = e => {
     if (modalRef.current === e.target) {
@@ -32,10 +30,26 @@ const Modal = ({ showModal, setShowModal, userInfo }) => {
     [keyPress]
   );
 
+  const [inv_data, set_inv_data] = useState([])
   useEffect(() => {
-      fetchOrders(userInfo)
-    },[userInfo]
-  )
+		const fetch_logs = async (id) => {
+			try {
+				const invoices_data = await fetchInvoices(id)
+				const json_data = await invoices_data.json()
+				set_inv_data(json_data.data)
+			} catch (e){
+				console.log(e)
+			}
+		}
+		fetch_logs(userInfo.RpAccId);
+		const fetch_interval = setInterval(() => {
+			fetch_logs()
+		}, 10000);
+
+		return () => {
+			clearInterval(fetch_interval);
+		}	
+	}, [userInfo])
 
   return (
     <>
@@ -64,8 +78,7 @@ const Modal = ({ showModal, setShowModal, userInfo }) => {
                   />
               </div>
               <div className="mx-3">
-                  <ClientsTable />
-                  <From_To />
+                  <InvoicesTable data={inv_data} />
               </div>
               </div>
           </div>

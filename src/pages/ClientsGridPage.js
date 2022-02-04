@@ -4,8 +4,9 @@ import Modal from '../components/Modal/Modal';
 import Nav from '../components/Navbar/Navbar';
 import Card from '../components/Card/Card';
 import { fetchRpAccs } from '../services'
+import { withRouter } from 'react-router-dom';
 
-const ClientsGridPage = () => {
+const ClientsGridPage = ({history}) => {
 
 	const [data, setData] = useState([])
 
@@ -17,10 +18,14 @@ const ClientsGridPage = () => {
 			}
 		}
 		fetch_rp();
-		setInterval(() => {
+		const fetch_interval = setInterval(() => {
 			fetch_rp()
 		}, 10000);
-  }, []);
+
+		return () => {
+			clearInterval(fetch_interval);
+		}	
+	}, [setData, history])
 
 	const [showModal, setShowModal] = useState(false);
 	const [modalUserInfo, setModalUserInfo] = useState({})
@@ -48,4 +53,4 @@ const ClientsGridPage = () => {
 	)
 }
 
-export default ClientsGridPage
+export default withRouter(ClientsGridPage)

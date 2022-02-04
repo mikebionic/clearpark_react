@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={ClientsGridPage} />
           <Route path='/clients_table/' exact component={ClientsTablePage} />
-          <Route path='/devices/' exact component={AttendancePage} />
+          <Route path='/parking_invoices/' exact component={AttendancePage} />
         </Switch>
       </Router>
     </div>

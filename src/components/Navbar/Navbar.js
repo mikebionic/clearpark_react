@@ -30,7 +30,7 @@ function Nav() {
                   </NavLink>
 
                   <NavLink
-                    to="/parking_orders/"
+                    to="/parking_invoices/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName = "text-white" >
                     Giriş/Çykyş
