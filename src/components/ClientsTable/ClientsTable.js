@@ -12,7 +12,7 @@ const ClientsTable = ({data = []}) => {
 							<tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
 								<th className="py-3 px-3 text-center w-auto">Ady</th>
 								<th className="py-3 px-3 text-center w-auto">Kody</th>
-								<th className="py-3 px-3 text-center w-auto">Yagdayy</th>
+								<th className="py-3 px-3 text-center w-auto">Balans</th>
 								{/* <th className="py-3 px-3 text-center w-auto">Actions</th> */}
 							</tr>
 							</thead>

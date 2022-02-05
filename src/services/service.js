@@ -17,6 +17,7 @@ export const fetchInvoices = async (RpAccId = null) => {
 	// return parking_invoices_mock
 	var data = await fetch(`${server_url}${invoicesPath}${url_args}`)
 	var resp_data = await data.json()
+	return resp_data.data
 }
 
 export const fetchDevices = () => {
