@@ -14,8 +14,7 @@ const AttendancePage = ({history}) => {
 			try {
 				console.log('starting fetch of inv')
 				const invoices_data = await fetchInvoices()
-				const json_data = await invoices_data.json()
-				setData(json_data.data)
+				setData(invoices_data)
 			} catch (e){
 				console.log(e)
 			}

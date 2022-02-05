@@ -22,7 +22,7 @@ const ClientsTable = ({data = []}) => {
 										<td className="px-3 py-4 whitespace-nowrap">
 											<div className="flex items-center justify-center">
 												<div className="ml-4">
-													<div className="text-sm font-medium text-gray-900">{person.RpAccName}</div>
+													<div className="text-sm font-medium text-gray-900">{person.RpAccUName}</div>
 													<div className="text-sm text-gray-500">{person.RpAccMobilePhoneNumber}</div>
 												</div>
 											</div>

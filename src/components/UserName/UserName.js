@@ -5,7 +5,7 @@ function UserName(props) {
 	return (
 		<div>
 			<div className="p-2">
-				<h3 className="text-center text-xl text-gray-900 font-medium leading-8">{props.RpAccName}</h3>
+				<h3 className="text-center text-xl text-gray-900 font-medium leading-8">{props.RpAccUName}</h3>
 				<div className="text-center text-gray-400 text-xs font-semibold">
 						<p>Kody: {props.RpAccRegNo}</p>
 						<p>Tel: {props.RpAccMobilePhoneNumber}</p>

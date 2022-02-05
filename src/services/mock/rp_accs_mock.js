@@ -36,7 +36,7 @@ export const rp_accs_mock = [
 		"RpAccLatitude":0.0,
 		"RpAccLongitude":0.0,
 		"RpAccMobilePhoneNumber":null,
-		"RpAccName":"Mergen",
+		"RpAccUName":"Mergen",
 		"RpAccPassportIssuePlace":null,
 		"RpAccPassportNo":null,
 		"RpAccPatronomic":null,

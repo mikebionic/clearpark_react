@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom';
 
 import Modal from '../components/Modal/Modal';
 import Nav from '../components/Navbar/Navbar';
 import Card from '../components/Card/Card';
 import { fetchRpAccs } from '../services'
-import { withRouter } from 'react-router-dom';
 
 const ClientsGridPage = ({history}) => {
 
